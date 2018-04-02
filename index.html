@@ -331,11 +331,10 @@
         
           
             <h5 id="测试图片的显示"><a href="#测试图片的显示" class="headerlink" title="测试图片的显示"></a>测试图片的显示</h5><p>不知道是不是使用github pages的原因。 在首页和展示页的图片路径不能相同。简单总结一下。 </p>
-<p>​    在首页使用这种路径描述<code>![图片描述](../images/vim操作.png)</code> 可以查看到图片，但是进入详情页后，图片就不能显示（找不到路径了）。 相反，使用    <img src="vim操作.png" alt="图片描述">    无法在首页查看， 但是进入详情页后可以看到图片。 </p>
-<p>​    所以，定义  每创建一篇文章，都在同级目录下创建同名文件夹，用来存放文件， 使用时同过    <img src="vim操作.png" alt="图片描述">    进行引用。 如果需要标题图片的话，就将图片文件放在images文件夹下。 通过<code>![图片](../images/vim操作.png)</code>引用。     </p>
-<p><img src="vim操作.png" alt="图片"></p>
-<p><img src="../vim操作.png" alt="11"></p>
-<p><img src="../images/vim操作.png" alt="图片二"></p>
+<pre><code>在首页使用这种路径描述![图片描述](../images/vim操作.png) 可以查看到图片，但是进入详情页后，图片就不能显示（找不到路径了）。 相反，使用    ![图片描述](vim操作.png)    无法在首页查看， 但是进入详情页后可以看到图片。 
+
+所以，定义  每创建一篇文章，都在同级目录下创建同名文件夹，用来存放文件， 使用时同过    ![图片描述](vim操作.png)    进行引用。 如果需要标题图片的话，就将图片文件放在images文件夹下。 通过`![图片](../images/vim操作.png)    `引用。     
+</code></pre><p><img src="vim操作.png" alt="图片"><br><img src="test-图片\vim操作.png" alt="11"><br><img src="../images/vim操作.png" alt="图片二"></p>
 
           
         
