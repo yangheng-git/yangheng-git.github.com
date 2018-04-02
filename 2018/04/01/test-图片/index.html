@@ -79,19 +79,22 @@
 
 
 
-<meta name="description" content="测试图片的显示使用和文章同级目录的资源文件夹， 编译之后无法访问到图片。解决办法。 在source文件夹下创建文件夹images 。所有图片分类存放。">
+<meta name="description" content="测试图片的显示不知道是不是使用github pages的原因。 在首页和展示页的图片路径不能相同。简单总结一下。  ​    在首页使用这种路径描述![图片描述](../images/vim操作.png) 可以查看到图片，但是进入详情页后，图片就不能显示（找不到路径了）。 相反，使用        无法在首页查看， 但是进入详情页后可以看到图片。  ​    所以，定义  每创建一篇文章，都在同级">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test-图片">
 <meta property="og:url" content="http://blog.yangheng.tk/2018/04/01/test-图片/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="测试图片的显示使用和文章同级目录的资源文件夹， 编译之后无法访问到图片。解决办法。 在source文件夹下创建文件夹images 。所有图片分类存放。">
+<meta property="og:description" content="测试图片的显示不知道是不是使用github pages的原因。 在首页和展示页的图片路径不能相同。简单总结一下。  ​    在首页使用这种路径描述![图片描述](../images/vim操作.png) 可以查看到图片，但是进入详情页后，图片就不能显示（找不到路径了）。 相反，使用        无法在首页查看， 但是进入详情页后可以看到图片。  ​    所以，定义  每创建一篇文章，都在同级">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog.yangheng.tk/2018/04/01/test-图片/vim操作.png">
+<meta property="og:image" content="http://blog.yangheng.tk/2018/04/01/test-图片/vim操作.png">
+<meta property="og:image" content="http://blog.yangheng.tk/2018/04/01/test-图片/vim操作.png">
+<meta property="og:image" content="http://blog.yangheng.tk/2018/04/01/vim操作.png">
 <meta property="og:image" content="http://blog.yangheng.tk/2018/04/01/images/vim操作.png">
-<meta property="og:updated_time" content="2018-04-02T06:08:23.793Z">
+<meta property="og:updated_time" content="2018-04-02T06:24:46.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test-图片">
-<meta name="twitter:description" content="测试图片的显示使用和文章同级目录的资源文件夹， 编译之后无法访问到图片。解决办法。 在source文件夹下创建文件夹images 。所有图片分类存放。">
+<meta name="twitter:description" content="测试图片的显示不知道是不是使用github pages的原因。 在首页和展示页的图片路径不能相同。简单总结一下。  ​    在首页使用这种路径描述![图片描述](../images/vim操作.png) 可以查看到图片，但是进入详情页后，图片就不能显示（找不到路径了）。 相反，使用        无法在首页查看， 但是进入详情页后可以看到图片。  ​    所以，定义  每创建一篇文章，都在同级">
 <meta name="twitter:image" content="http://blog.yangheng.tk/2018/04/01/test-图片/vim操作.png">
 
 
@@ -332,8 +335,11 @@
       
 
       
-        <h5 id="测试图片的显示"><a href="#测试图片的显示" class="headerlink" title="测试图片的显示"></a>测试图片的显示</h5><p>使用和文章同级目录的资源文件夹， 编译之后无法访问到图片。<br>解决办法。 在source文件夹下创建文件夹images 。所有图片分类存放。 </p>
-<p><img src="vim操作.png" alt=""></p>
+        <h5 id="测试图片的显示"><a href="#测试图片的显示" class="headerlink" title="测试图片的显示"></a>测试图片的显示</h5><p>不知道是不是使用github pages的原因。 在首页和展示页的图片路径不能相同。简单总结一下。 </p>
+<p>​    在首页使用这种路径描述<code>![图片描述](../images/vim操作.png)</code> 可以查看到图片，但是进入详情页后，图片就不能显示（找不到路径了）。 相反，使用    <img src="vim操作.png" alt="图片描述">    无法在首页查看， 但是进入详情页后可以看到图片。 </p>
+<p>​    所以，定义  每创建一篇文章，都在同级目录下创建同名文件夹，用来存放文件， 使用时同过    <img src="vim操作.png" alt="图片描述">    进行引用。 如果需要标题图片的话，就将图片文件放在images文件夹下。 通过<code>![图片](../images/vim操作.png)</code>引用。     </p>
+<p><img src="vim操作.png" alt="图片"></p>
+<p><img src="../vim操作.png" alt="11"></p>
 <p><img src="../images/vim操作.png" alt="图片二"></p>
 
       
