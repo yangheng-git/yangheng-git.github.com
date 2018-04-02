@@ -79,21 +79,20 @@
 
 
 
-<meta name="description" content="测试图片的显示 方法1-2–采用顶级文件夹下的图片方法3– 使用同路径下的资源文件夹。         不能用。 方法4– 不使用makedown语法 {\%test-图片\vim操作.png[图片] \%}">
+<meta name="description" content="测试图片的显示使用和文章同级目录的资源文件夹， 编译之后无法访问到图片。  解决办法。 在source文件夹下创建文件夹images 。所有图片分类存放。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test-图片">
-<meta property="og:url" content="http://yoursite.com/2018/04/01/test-图片/index.html">
+<meta property="og:url" content="http://blog.yangheng.tk/2018/04/01/test-图片/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="测试图片的显示 方法1-2–采用顶级文件夹下的图片方法3– 使用同路径下的资源文件夹。         不能用。 方法4– 不使用makedown语法 {\%test-图片\vim操作.png[图片] \%}">
+<meta property="og:description" content="测试图片的显示使用和文章同级目录的资源文件夹， 编译之后无法访问到图片。  解决办法。 在source文件夹下创建文件夹images 。所有图片分类存放。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/04/01/images/vim操作.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/01/uploads/30469680.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/04/01/test-图片/test-图片/vim操作.png">
-<meta property="og:updated_time" content="2018-04-01T15:21:11.154Z">
+<meta property="og:image" content="http://blog.yangheng.tk/vim操作.png">
+<meta property="og:image" content="http://blog.yangheng.tk/2018/04/01/images/vim操作.png">
+<meta property="og:updated_time" content="2018-04-02T00:46:21.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test-图片">
-<meta name="twitter:description" content="测试图片的显示 方法1-2–采用顶级文件夹下的图片方法3– 使用同路径下的资源文件夹。         不能用。 方法4– 不使用makedown语法 {\%test-图片\vim操作.png[图片] \%}">
-<meta name="twitter:image" content="http://yoursite.com/2018/04/01/images/vim操作.png">
+<meta name="twitter:description" content="测试图片的显示使用和文章同级目录的资源文件夹， 编译之后无法访问到图片。  解决办法。 在source文件夹下创建文件夹images 。所有图片分类存放。">
+<meta name="twitter:image" content="http://blog.yangheng.tk/vim操作.png">
 
 
 
@@ -123,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/01/test-图片/"/>
+  <link rel="canonical" href="http://blog.yangheng.tk/2018/04/01/test-图片/"/>
 
 
 
@@ -296,10 +295,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/test-图片/">
+    <link itemprop="mainEntityOfPage" href="http://blog.yangheng.tk/2018/04/01/test-图片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
+      <meta itemprop="name" content="杨">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/30469680.jpg">
     </span>
@@ -363,10 +362,10 @@
       
 
       
-        <p>测试图片的显示</p>
-<p>方法1-2–采用顶级文件夹下的图片<br><img src="..\images\vim操作.png" alt="图片1--vim操作"><br><img src="..\uploads\30469680.jpg" alt="图片2---"><br>方法3– 使用同路径下的资源文件夹。         不能用。<br><img src="test-图片\vim操作.png" alt="图片3---vim操作"></p>
-<p>方法4– 不使用makedown语法</p>
-<p>{\%test-图片\vim操作.png[图片] \%}</p>
+        <h5 id="测试图片的显示"><a href="#测试图片的显示" class="headerlink" title="测试图片的显示"></a>测试图片的显示</h5><p>使用和文章同级目录的资源文件夹， 编译之后无法访问到图片。 </p>
+<p>解决办法。 在source文件夹下创建文件夹images 。所有图片分类存放。 </p>
+<p><img src="/vim操作.png" alt="图片一"></p>
+<p><img src="../images/vim操作.png" alt="图片二"></p>
 
       
     </div>
@@ -377,7 +376,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg" alt=" wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg" alt="杨 wechat" style="width: 200px; max-width: 100%;"/>
     <div>关注微信公众号</div>
 </div>
 
@@ -395,21 +394,21 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt=" 微信支付"/>
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨 微信支付"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt=" 支付宝"/>
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨 支付宝"/>
         <p>支付宝</p>
       </div>
     
 
     
       <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt=" 比特币"/>
+        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨 比特币"/>
         <p>比特币</p>
       </div>
     
@@ -425,11 +424,11 @@
         <ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者：</strong>
-    
+    杨
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2018/04/01/test-图片/" title="test-图片">http://yoursite.com/2018/04/01/test-图片/</a>
+    <a href="http://blog.yangheng.tk/2018/04/01/test-图片/" title="test-图片">http://blog.yangheng.tk/2018/04/01/test-图片/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -511,16 +510,25 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
                 src="/uploads/30469680.jpg"
-                alt="" />
+                alt="杨" />
             
-              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-author-name" itemprop="name">杨</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -575,6 +583,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#测试图片的显示"><span class="nav-number">1.</span> <span class="nav-text">测试图片的显示</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -592,7 +616,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder"></span>
+  <span class="author" itemprop="copyrightHolder">杨</span>
 
   
 </div>
