@@ -79,24 +79,18 @@
 
 
 
-<meta name="description" content="123456create table 成绩(sno number，km varchar2( 10)，score number) ;insert into 成绩 values(1, &apos;语文&apos;, 60 );insert into 成绩 values(1, &apos;数学&apos;, 60 );insert into 成绩 values(2, &apos;英语&apos;, 60 );insert into 成绩 values(2, &apos;语">
+<meta name="description" content="oracle 安装之后，需要测试使用 启动oracle数据库12345678910su - oracle #切换到oracle用户sqlplus /nolog #进入sqlplusconn / as sysdba #以超级管理员权限登录startup #启动数据库实例quit #退出lsnrctl start #启动监听			一定要启动监听	startup参数说明：	startup #不带任何参数">
 <meta name="keywords" content="oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="oracle学习---分组练习">
-<meta property="og:url" content="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/index.html">
+<meta property="og:title" content="oracle学习---启动和连接">
+<meta property="og:url" content="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---启动和连接/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="123456create table 成绩(sno number，km varchar2( 10)，score number) ;insert into 成绩 values(1, &apos;语文&apos;, 60 );insert into 成绩 values(1, &apos;数学&apos;, 60 );insert into 成绩 values(2, &apos;英语&apos;, 60 );insert into 成绩 values(2, &apos;语">
+<meta property="og:description" content="oracle 安装之后，需要测试使用 启动oracle数据库12345678910su - oracle #切换到oracle用户sqlplus /nolog #进入sqlplusconn / as sysdba #以超级管理员权限登录startup #启动数据库实例quit #退出lsnrctl start #启动监听			一定要启动监听	startup参数说明：	startup #不带任何参数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/1.png">
-<meta property="og:image" content="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/2.png">
-<meta property="og:image" content="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/3.png">
-<meta property="og:image" content="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/4.png">
-<meta property="og:image" content="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/5.png">
-<meta property="og:updated_time" content="2018-04-02T12:21:25.361Z">
+<meta property="og:updated_time" content="2018-04-02T12:35:48.161Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="oracle学习---分组练习">
-<meta name="twitter:description" content="123456create table 成绩(sno number，km varchar2( 10)，score number) ;insert into 成绩 values(1, &apos;语文&apos;, 60 );insert into 成绩 values(1, &apos;数学&apos;, 60 );insert into 成绩 values(2, &apos;英语&apos;, 60 );insert into 成绩 values(2, &apos;语">
-<meta name="twitter:image" content="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/1.png">
+<meta name="twitter:title" content="oracle学习---启动和连接">
+<meta name="twitter:description" content="oracle 安装之后，需要测试使用 启动oracle数据库12345678910su - oracle #切换到oracle用户sqlplus /nolog #进入sqlplusconn / as sysdba #以超级管理员权限登录startup #启动数据库实例quit #退出lsnrctl start #启动监听			一定要启动监听	startup参数说明：	startup #不带任何参数">
 
 
 
@@ -126,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/"/>
+  <link rel="canonical" href="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---启动和连接/"/>
 
 
 
 
 
-  <title>oracle学习---分组练习 | 我的博客</title>
+  <title>oracle学习---启动和连接 | 我的博客</title>
   
 
 
@@ -269,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---分组练习/">
+    <link itemprop="mainEntityOfPage" href="http://blog.yangheng.tk/2018/04/02/oracle/oracle学习---启动和连接/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨">
@@ -286,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">oracle学习---分组练习</h1>
+          <h1 class="post-title" itemprop="name headline">oracle学习---启动和连接</h1>
         
 
         <div class="post-meta">
@@ -298,7 +292,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T22:21:46+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T20:28:18+08:00">
                 2018-04-02
               </time>
             
@@ -358,21 +352,15 @@
       
 
       
-        <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 成绩(sno <span class="built_in">number</span>，km varchar2( <span class="number">10</span>)，score <span class="built_in">number</span>) ;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 成绩 <span class="keyword">values</span>(<span class="number">1</span>, <span class="string">'语文'</span>, <span class="number">60</span> );</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 成绩 <span class="keyword">values</span>(<span class="number">1</span>, <span class="string">'数学'</span>, <span class="number">60</span> );</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 成绩 <span class="keyword">values</span>(<span class="number">2</span>, <span class="string">'英语'</span>, <span class="number">60</span> );</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 成绩 <span class="keyword">values</span>(<span class="number">2</span>, <span class="string">'语文'</span>, <span class="number">70</span> );</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 成绩 <span class="keyword">values</span>(<span class="number">3</span>, <span class="string">'语文'</span>, <span class="number">80</span> );</span><br></pre></td></tr></table></figure>
-<p>要求1: 查出每个学生的成绩的总和<br>        select sno , sum(score) from 成绩 group by sno ;<br>​            不能写km 字段，因为一个学生有多个科目，分组后无法显示。 </p>
-<p><img src="1.png" alt="图片"></p>
-<p>要求2: 查出每门课程的平均成绩</p>
-<pre><code>select  km ,avg(score) from 成绩 group by km; 
-</code></pre><p><img src="2.png" alt="图片"></p>
-<p>要求3: 查出平均成缋大于60 的学生的学号和平均成缋</p>
-<pre><code>select sno, avg(score) from 成绩 group by sno having( avg(score) &gt; 60);
-</code></pre><p><img src="3.png" alt="图片"></p>
-<p>要求4: 查出平均成缋大于所有学生的平均成绩的学生的学号和平均成绩I</p>
-<pre><code>select sno, avg(score) from 成绩 group by sno having(avg(score) &gt; (select avg(score) from 成绩 ) );
-</code></pre><p><img src="4.png" alt="图片"></p>
-<p>要求5: 查出平均成缋大于60 的学生的学号和平均成绩，并按照学号的降序排列(说明了几个谓词的顺序)</p>
-<pre><code>select sno , avg(score) from 成绩 group by sno having(avg(score) &gt; 60  ) order by sno desc;
-</code></pre><p><img src="5.png" alt="图片"></p>
+        <p>oracle 安装之后，需要测试使用</p>
+<h5 id="启动oracle数据库"><a href="#启动oracle数据库" class="headerlink" title="启动oracle数据库"></a>启动oracle数据库</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">su - oracle #切换到oracle用户</span><br><span class="line">sqlplus /nolog #进入sqlplus</span><br><span class="line">conn / as sysdba #以超级管理员权限登录</span><br><span class="line">startup #启动数据库实例</span><br><span class="line">quit #退出</span><br><span class="line">lsnrctl start #启动监听			一定要启动监听</span><br><span class="line">	startup参数说明：</span><br><span class="line">	startup #不带任何参数，启动数据库实例并打开数据库,一般选择这种启动方式</span><br><span class="line">	startup nomount #只启动数据库实例，不打开数据库，一般用于创建新的数据库时使用</span><br><span class="line">	startup mount #启动数据库实例，并加载数据库，但不打开数据库，一般用于修改数据库名称等管理时使用</span><br></pre></td></tr></table></figure>
+<h5 id="关闭oracle数据库"><a href="#关闭oracle数据库" class="headerlink" title="关闭oracle数据库"></a>关闭oracle数据库</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">su - oracle #切换到oracle用户</span><br><span class="line">lsnrctl stop #关闭监听器</span><br><span class="line">sqlplus /nolog #进入sqlplus</span><br><span class="line">shutdown immediate #关闭数据库实例</span><br><span class="line">quit #退出</span><br><span class="line"></span><br><span class="line">	shutdown参数说明：</span><br><span class="line">	normal #等待所有的用户断开连接，执行命令后不允许新连接</span><br><span class="line">	immediate #等待用户完成当前的语句后，再断开用户连接，不允许新用户连接</span><br><span class="line">	transactional #等待用户完成当前的事务后断开连接，不允许新用户连接</span><br><span class="line">	abort #强行断开连接并直接关闭数据库</span><br><span class="line">	前面三种方法不会导致数据库出错，最后一种方法非特殊状况不建议使用，</span><br><span class="line">	一般使用shutdown immediate关闭数据库</span><br><span class="line">	备注：如果执行shutdown immediate出现ORA-01012: not logged on错误</span><br><span class="line">	请先执行以下语句</span><br><span class="line">	ps -ef|grep ora_dbw0_$orcl</span><br><span class="line">	kill -9 pid #pid为进程号</span><br><span class="line">	其中orcl 是数据库的SID</span><br></pre></td></tr></table></figure>
+<p>另外还有将oracle 设置为服务，设定为开机自启等功能。<br><a href="http://www.osyunwei.com/archives/5445.html" target="_blank" rel="noopener">http://www.osyunwei.com/archives/5445.html</a></p>
+<h5 id="解锁SCOTT用户，在windows-安装oracle客户端，使用plsql进行连接"><a href="#解锁SCOTT用户，在windows-安装oracle客户端，使用plsql进行连接" class="headerlink" title="解锁SCOTT用户，在windows 安装oracle客户端，使用plsql进行连接"></a>解锁SCOTT用户，在windows 安装oracle客户端，使用plsql进行连接</h5><p>1、解锁SCOTT用户<br>在linux中<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sqlplus /nolog</span><br><span class="line">//另一种连接方式</span><br><span class="line">sqlp\ conn sys/system@oracle10 as sysdba // sys为当前的oracle 用户 system 为该用户密码 oracle10 为SID </span><br><span class="line"></span><br><span class="line">conn sys/password as sysdba; </span><br><span class="line">alter user soctt account lock; // 把 scott用户锁定</span><br><span class="line">alter user scott account unlock; //把scott用户解锁</span><br><span class="line">alter user scott identified by tiger //修改scott用户密码为 tiger,scott用户默认密码为 tiger</span><br></pre></td></tr></table></figure></p>
+<p>sqlplus 连接远程数据库。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlplus username/password@//host:port/sid</span><br></pre></td></tr></table></figure></p>
+<p>　　用sqlplus远程连接oracle命令(例：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlplus risenet/1@//192.168.130.99:1521/risenet</span><br></pre></td></tr></table></figure></p>
+<p>在windows 安装oracle 客户端<br>    下载32位直接安装，<br>    然后配置 net Configuration Assistant<br>    配置本地网络服务时 名字叫 Orcl</p>
+<p>plsql 下载绿色版，直接用</p>
 
       
     </div>
@@ -437,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/02/oracle/oracle学习---启动和连接/" rel="next" title="oracle学习---启动和连接">
-                <i class="fa fa-chevron-left"></i> oracle学习---启动和连接
+              <a href="/2018/04/01/test-图片/" rel="next" title="test-图片">
+                <i class="fa fa-chevron-left"></i> test-图片
               </a>
             
           </div>
@@ -446,6 +434,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/02/oracle/oracle学习---分组练习/" rel="prev" title="oracle学习---分组练习">
+                oracle学习---分组练习 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -497,8 +489,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -578,6 +579,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#启动oracle数据库"><span class="nav-number">1.</span> <span class="nav-text">启动oracle数据库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关闭oracle数据库"><span class="nav-number">2.</span> <span class="nav-text">关闭oracle数据库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解锁SCOTT用户，在windows-安装oracle客户端，使用plsql进行连接"><span class="nav-number">3.</span> <span class="nav-text">解锁SCOTT用户，在windows 安装oracle客户端，使用plsql进行连接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
