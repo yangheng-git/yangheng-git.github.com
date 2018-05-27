@@ -352,7 +352,7 @@
       
         
           
-          ###一张表的多次查询12345678910111213141516171819202122232425262728293031##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0
+          一张表的多次查询 项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间 最大-最小。 
           ...
           <!--noindex-->
           <div class="post-button text-center">

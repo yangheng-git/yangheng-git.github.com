@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="###一张表的多次查询12345678910111213141516171819202122232425262728293031##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间">
+<meta name="description" content="一张表的多次查询 项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间 最大-最小。 得出 用户这次请求的持续时间（秒） ，取出必要的数据， 当时日期（天） 创建时间（时间戳）.。 第二">
 <meta name="keywords" content="mysql  工作中写的sql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql语句记录">
 <meta property="og:url" content="http://blog.yangheng.tk/2018/05/27/mysql/sql语句记录/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="###一张表的多次查询12345678910111213141516171819202122232425262728293031##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间">
+<meta property="og:description" content="一张表的多次查询 项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间 最大-最小。 得出 用户这次请求的持续时间（秒） ，取出必要的数据， 当时日期（天） 创建时间（时间戳）.。 第二">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-27T06:54:38.293Z">
+<meta property="og:updated_time" content="2018-05-27T06:57:41.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql语句记录">
-<meta name="twitter:description" content="###一张表的多次查询12345678910111213141516171819202122232425262728293031##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间">
+<meta name="twitter:description" content="一张表的多次查询 项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间 最大-最小。 得出 用户这次请求的持续时间（秒） ，取出必要的数据， 当时日期（天） 创建时间（时间戳）.。 第二">
 
 
 
@@ -352,8 +352,8 @@
       
 
       
-        <p>###一张表的多次查询<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间 最大-最小。 得出 用户这次请求的持续时间（秒） ，取出必要的数据， 当时日期（天） 创建时间（时间戳）.。 第二次查询。 对取出的数据进行分组， 通过 "天" ， 然后取出每天中的多条在线时长进行sum. 得出每天的在线时长 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">###统计每天的在线时长</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	time.day1,</span><br><span class="line">	<span class="keyword">SUM</span>(time.t)</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	(</span><br><span class="line">		<span class="keyword">SELECT</span></span><br><span class="line">			createTime,</span><br><span class="line">			<span class="keyword">DATE_FORMAT</span>(from_unixtime(<span class="keyword">MIN</span>(createTime)),<span class="string">'%Y-%m-%d'</span>) <span class="keyword">as</span> day1,</span><br><span class="line">			<span class="keyword">MAX</span>(createTime) - <span class="keyword">MIN</span>(createTime) <span class="keyword">AS</span> t</span><br><span class="line">		<span class="keyword">FROM</span></span><br><span class="line">			app_request_log</span><br><span class="line">		<span class="keyword">WHERE</span></span><br><span class="line">			sessionId <span class="keyword">IN</span> (</span><br><span class="line">				<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span></span><br><span class="line">					sessionId</span><br><span class="line">				<span class="keyword">FROM</span></span><br><span class="line">					app_request_log</span><br><span class="line">				<span class="keyword">WHERE</span></span><br><span class="line">					userId = <span class="number">606</span></span><br><span class="line">			)</span><br><span class="line">		<span class="keyword">AND</span> (userId = <span class="number">606</span> <span class="keyword">OR</span> userId = <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">			sessionId</span><br><span class="line">	) <span class="keyword">AS</span> <span class="keyword">time</span> </span><br><span class="line"></span><br><span class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> 			<span class="keyword">DATE_FORMAT</span>(from_unixtime(<span class="keyword">MIN</span>(createTime)),<span class="string">'%Y-%m-%d'</span>);</span><br></pre></td></tr></table></figure></p>
-
+        <h3 id="一张表的多次查询"><a href="#一张表的多次查询" class="headerlink" title="一张表的多次查询"></a>一张表的多次查询</h3><p> 项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间 最大-最小。 得出 用户这次请求的持续时间（秒） ，取出必要的数据， 当时日期（天） 创建时间（时间戳）.。 第二次查询。 对取出的数据进行分组， 通过 “天” ， 然后取出每天中的多条在线时长进行sum. 得出每天的在线时长 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">###统计每天的在线时长</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	time.day1,</span><br><span class="line">	<span class="keyword">SUM</span>(time.t)</span><br><span class="line"><span class="keyword">FROM</span>(</span><br><span class="line">		<span class="keyword">SELECT</span></span><br><span class="line">			createTime,</span><br><span class="line">			<span class="keyword">DATE_FORMAT</span>(from_unixtime(<span class="keyword">MIN</span>(createTime)),<span class="string">'%Y-%m-%d'</span>) <span class="keyword">as</span> day1,</span><br><span class="line">			<span class="keyword">MAX</span>(createTime) - <span class="keyword">MIN</span>(createTime) <span class="keyword">AS</span> t</span><br><span class="line">		<span class="keyword">FROM</span></span><br><span class="line">			app_request_log</span><br><span class="line">		<span class="keyword">WHERE</span></span><br><span class="line">			sessionId <span class="keyword">IN</span> (</span><br><span class="line">				<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span></span><br><span class="line">					sessionId</span><br><span class="line">				<span class="keyword">FROM</span></span><br><span class="line">					app_request_log</span><br><span class="line">				<span class="keyword">WHERE</span></span><br><span class="line">					userId = <span class="number">606</span></span><br><span class="line">			)</span><br><span class="line">		<span class="keyword">AND</span> (userId = <span class="number">606</span> <span class="keyword">OR</span> userId = <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">			sessionId</span><br><span class="line">	) <span class="keyword">AS</span> <span class="keyword">time</span> </span><br><span class="line"></span><br><span class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> 			<span class="keyword">DATE_FORMAT</span>(from_unixtime(<span class="keyword">MIN</span>(createTime)),<span class="string">'%Y-%m-%d'</span>);</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -503,8 +503,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -584,6 +593,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一张表的多次查询"><span class="nav-number">1.</span> <span class="nav-text">一张表的多次查询</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
