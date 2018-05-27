@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="oracle,oralce数据类型," />
+  <meta name="keywords" content="mysql  工作中写的sql," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="oracle的数据类型​    字符    数值    日期时间        RAW / LONG RAW        LOB 字符（char nchar() varchar2 long）char或nchar存放固定长度的字符串、型储存字母数字值、1到2000个字节 varchar2支持可变长度的字符串、储存字母数字值、1-4000个字节 varchar尽量少用、高版本不支持 long 储存可">
-<meta name="keywords" content="oracle,oralce数据类型">
+<meta name="description" content="###一张表的多次查询12345678910111213141516171819202122232425262728293031##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间">
+<meta name="keywords" content="mysql  工作中写的sql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="oracle学习---oralce的基本数据类型和伪列">
-<meta property="og:url" content="http://blog.yangheng.tk/2018/04/04/oracle/oracle学习---基本数据类型和伪列/index.html">
+<meta property="og:title" content="sql语句记录">
+<meta property="og:url" content="http://blog.yangheng.tk/2018/05/27/mysql/sql语句记录/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="oracle的数据类型​    字符    数值    日期时间        RAW / LONG RAW        LOB 字符（char nchar() varchar2 long）char或nchar存放固定长度的字符串、型储存字母数字值、1到2000个字节 varchar2支持可变长度的字符串、储存字母数字值、1-4000个字节 varchar尽量少用、高版本不支持 long 储存可">
+<meta property="og:description" content="###一张表的多次查询12345678910111213141516171819202122232425262728293031##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-04T10:12:14.775Z">
+<meta property="og:updated_time" content="2018-05-27T06:54:38.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="oracle学习---oralce的基本数据类型和伪列">
-<meta name="twitter:description" content="oracle的数据类型​    字符    数值    日期时间        RAW / LONG RAW        LOB 字符（char nchar() varchar2 long）char或nchar存放固定长度的字符串、型储存字母数字值、1到2000个字节 varchar2支持可变长度的字符串、储存字母数字值、1-4000个字节 varchar尽量少用、高版本不支持 long 储存可">
+<meta name="twitter:title" content="sql语句记录">
+<meta name="twitter:description" content="###一张表的多次查询12345678910111213141516171819202122232425262728293031##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.yangheng.tk/2018/04/04/oracle/oracle学习---基本数据类型和伪列/"/>
+  <link rel="canonical" href="http://blog.yangheng.tk/2018/05/27/mysql/sql语句记录/"/>
 
 
 
 
 
-  <title>oracle学习---oralce的基本数据类型和伪列 | 我的博客</title>
+  <title>sql语句记录 | 我的博客</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.yangheng.tk/2018/04/04/oracle/oracle学习---基本数据类型和伪列/">
+    <link itemprop="mainEntityOfPage" href="http://blog.yangheng.tk/2018/05/27/mysql/sql语句记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">oracle学习---oralce的基本数据类型和伪列</h1>
+          <h1 class="post-title" itemprop="name headline">sql语句记录</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-04T17:15:56+08:00">
-                2018-04-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-27T14:29:36+08:00">
+                2018-05-27
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/oracle/" itemprop="url" rel="index">
-                    <span itemprop="name">oracle</span>
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
                   </a>
                 </span>
 
@@ -352,39 +352,7 @@
       
 
       
-        <h4 id="oracle的数据类型"><a href="#oracle的数据类型" class="headerlink" title="oracle的数据类型"></a>oracle的数据类型</h4><p>​    字符    数值    日期时间        RAW / LONG RAW        LOB</p>
-<h5 id="字符（char-nchar-varchar2-long）"><a href="#字符（char-nchar-varchar2-long）" class="headerlink" title="字符（char nchar() varchar2 long）"></a>字符（char nchar() varchar2 long）</h5><p>char或nchar存放固定长度的字符串、型储存字母数字值、1到2000个字节</p>
-<p>varchar2支持可变长度的字符串、储存字母数字值、1-4000个字节</p>
-<p>varchar尽量少用、高版本不支持</p>
-<p>long 储存可变长度的字符数据、最多可储存2GB字节</p>
-<h5 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h5><p><strong>number</strong></p>
-<p> NUMBER( p,s ) p表示精度（总长度） s表示小数位置且四舍五入<br> NUMBER(10,3) 10是总长度，3是小数位数的长度</p>
-<p><strong>number[(p[,s])]</strong></p>
-<p>可以储存整数、浮点数和实数最高精度38位负的10的38次方到10的38次方</p>
-<p>p表示精度（总共多少位），s表示小数点的位数，</p>
-<p>如number(3,2) 如1.23，number(3)总共3位的整数若插入小数自动四舍五入。</p>
-<h5 id="日期类型"><a href="#日期类型" class="headerlink" title="日期类型"></a>日期类型</h5><ul>
-<li><p><strong>DATE</strong>：一个7字节的定宽日期/时间数据类型。其中总包含7个属性，包括：世纪、世纪中哪一年、月份、月中的哪一天、小时、分钟和秒。</p>
-</li>
-<li><p><strong>TIMESTAMP</strong>（timestarp）：一个7 字节或12.字节的定宽日期/时间数据类型。它与DATE 数据类型不同，因为TIMESTAMP 可以包含小数秒（fractional second）；带小数秒的TIMESTAMP 在小数点右边最多可以保留9位。</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">data 储存日期和时间部分，精确到秒</span><br><span class="line"></span><br><span class="line">timestamp 储存日期、时间和时区信息，秒值精确到小数殿后6位</span><br><span class="line"></span><br><span class="line">select sysdate from dual; （查询系统当前时间）</span><br><span class="line"></span><br><span class="line">其中dual为了保证sql语言的完整性。</span><br><span class="line"></span><br><span class="line">data 储存日期和时间部分，精确到秒</span><br><span class="line"></span><br><span class="line">timestamp 储存日期、时间和时区信息，秒值精确到小数殿后6位</span><br><span class="line"></span><br><span class="line">select sysdate from dual; （查询系统当前时间）</span><br><span class="line"></span><br><span class="line">其中dual为了保证sql语言的完整性。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data 储存日期和时间部分，精确到秒</span><br><span class="line"></span><br><span class="line">timestamp 储存日期、时间和时区信息，秒值精确到小数殿后6位</span><br><span class="line"></span><br><span class="line">select sysdate from dual; （查询系统当前时间）</span><br><span class="line"></span><br><span class="line">其中dual为了保证sql语言的完整性。</span><br></pre></td></tr></table></figure>
-<h5 id="二进制及大文本数据"><a href="#二进制及大文本数据" class="headerlink" title="二进制及大文本数据"></a>二进制及大文本数据</h5><ul>
-<li><p><strong>BLOB</strong>： (binary large object)在Oracle9i及以前的版本中， 这种数据类型允许存储最多4GB的数据， 在Oracle 10g及以后的版本中允许存储最多（4GB）×（数据库块大小）字节的数据。BLOB包含不需要进行字符集转换的“二进制“数据，如果要存储电子表格、字处理文档、图像文件等就很适合采用</p>
-</li>
-<li><p><strong>CLOB</strong>：（Character Large Object）在Oracle9i及以前的版本中， 这种数据类型允许存储最多4GB的数据， 在Oracle 10g及以后的版本中允许存储最多（4GB）×（数据库块大小）字节的数据。CLOB包含要进行字符集转换的信息。这种数据类型很适合存储纯文本信息。</p>
-</li>
-</ul>
-<p>lob数据类型允许对数据进行高效、随机、分段的访问。 最多能存储多达128T的非结构化信息</p>
-<p><strong>clob</strong>：字符型lob 存放大量字符数据</p>
-<p><strong>blob：</strong>二进制lob存放较大的二进制对象，如图形、视频剪辑和声音文件（为了图片的安全）</p>
-<p><strong>bfile：</strong>外部二进制文件，存放指针。</p>
-<h5 id="伪列（rowid和rownum）"><a href="#伪列（rowid和rownum）" class="headerlink" title="伪列（rowid和rownum）"></a>伪列（rowid和rownum）</h5><p>伪列就像一个表列，但是他并不存储在表中</p>
-<p>可以从表中查询，但不能插入、更新和删除他们的值</p>
-<p>常用的伪列有rowid和rownum</p>
-<p><strong>rowid</strong>是表中行的储存地址，改地址可以唯一地标示数据库的一行，可以使用rowid快速的定位表中的一行</p>
-<p><strong>rownum</strong>是查询返回结果集行的序号，可以使用它来限制查询返回的行数，类似（sql server中的top）用到分页</p>
+        <p>###一张表的多次查询<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##项目中用到的语句， 首先查出指定用户所有的sessionId ， 然后用传入的sessionId 去取数据， 可能会遇到同一sessionId ，但是useriD 为0的情况， 所有进行判断。 然后将查出的数据进根据sessionId 分组。  取这个组中的创建时间 最大-最小。 得出 用户这次请求的持续时间（秒） ，取出必要的数据， 当时日期（天） 创建时间（时间戳）.。 第二次查询。 对取出的数据进行分组， 通过 "天" ， 然后取出每天中的多条在线时长进行sum. 得出每天的在线时长 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">###统计每天的在线时长</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	time.day1,</span><br><span class="line">	<span class="keyword">SUM</span>(time.t)</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	(</span><br><span class="line">		<span class="keyword">SELECT</span></span><br><span class="line">			createTime,</span><br><span class="line">			<span class="keyword">DATE_FORMAT</span>(from_unixtime(<span class="keyword">MIN</span>(createTime)),<span class="string">'%Y-%m-%d'</span>) <span class="keyword">as</span> day1,</span><br><span class="line">			<span class="keyword">MAX</span>(createTime) - <span class="keyword">MIN</span>(createTime) <span class="keyword">AS</span> t</span><br><span class="line">		<span class="keyword">FROM</span></span><br><span class="line">			app_request_log</span><br><span class="line">		<span class="keyword">WHERE</span></span><br><span class="line">			sessionId <span class="keyword">IN</span> (</span><br><span class="line">				<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span></span><br><span class="line">					sessionId</span><br><span class="line">				<span class="keyword">FROM</span></span><br><span class="line">					app_request_log</span><br><span class="line">				<span class="keyword">WHERE</span></span><br><span class="line">					userId = <span class="number">606</span></span><br><span class="line">			)</span><br><span class="line">		<span class="keyword">AND</span> (userId = <span class="number">606</span> <span class="keyword">OR</span> userId = <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">			sessionId</span><br><span class="line">	) <span class="keyword">AS</span> <span class="keyword">time</span> </span><br><span class="line"></span><br><span class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> 			<span class="keyword">DATE_FORMAT</span>(from_unixtime(<span class="keyword">MIN</span>(createTime)),<span class="string">'%Y-%m-%d'</span>);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -436,9 +404,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/oracle/" rel="tag"># oracle</a>
-          
-            <a href="/tags/oralce数据类型/" rel="tag"># oralce数据类型</a>
+            <a href="/tags/mysql-工作中写的sql/" rel="tag"># mysql  工作中写的sql</a>
           
         </div>
       
@@ -451,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/02/oracle/oracle学习---分组练习/" rel="next" title="oracle学习---分组练习">
-                <i class="fa fa-chevron-left"></i> oracle学习---分组练习
+              <a href="/2018/04/04/oracle学习-简单sql语句/" rel="next" title="oracle学习---简单sql语句">
+                <i class="fa fa-chevron-left"></i> oracle学习---简单sql语句
               </a>
             
           </div>
@@ -460,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/04/oracle学习-简单sql语句/" rel="prev" title="oracle学习---简单sql语句">
-                oracle学习---简单sql语句 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,17 +503,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -631,22 +584,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#oracle的数据类型"><span class="nav-number">1.</span> <span class="nav-text">oracle的数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#字符（char-nchar-varchar2-long）"><span class="nav-number">1.1.</span> <span class="nav-text">字符（char nchar() varchar2 long）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数值型"><span class="nav-number">1.2.</span> <span class="nav-text">数值型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#日期类型"><span class="nav-number">1.3.</span> <span class="nav-text">日期类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二进制及大文本数据"><span class="nav-number">1.4.</span> <span class="nav-text">二进制及大文本数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#伪列（rowid和rownum）"><span class="nav-number">1.5.</span> <span class="nav-text">伪列（rowid和rownum）</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
